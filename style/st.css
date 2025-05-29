@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+:root{
+    --white-color:#fff;
+    --dark-color: #000;
+    --primary-color: #f0f0f0;
+    --scondary-color: #e5e5e5;
+    --light-pink-color: #d4d4d4;
+    --mediam-grary-color: #3b3b3b;
+    --media-grar-color: #404040;
+    --mediam-rary-color: rgba(0,0,0,0.6);
+
+
+}
+body.dark{
+    --white-color:#000;
+    --dark-color: #d4d4d4;
+    --primary-color: #333;
+    --scondary-color: #404040;
+    --light-pink-color: #737373;
+    --media-grar-color: #d4d4d4;  
+}
+body{
+background:var(--white-color);
+}
+.continer header .navbar{
+display: flex;
+align-items: center;
+gap: 2rem;
+padding: 0.5rem 1rem;
+justify-content: space-between;
+}
+.continer :where(.navsection, .navlogo, .searchform){
+    display: flex;
+    align-items: center;
+}
+.continer  :where(.logoimg, .userimg){
+    width: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.continer  .navsection{
+gap: 1rem;
+}
+.continer  .navsection .nav-btn {
+cursor: pointer;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+background: none;
+transition: 0.3s ease;
+}
+.continer .navcenter .nav-btn:hover {
+background-color: #f0f0f0;
+
+}
+
+.continer   .navsection .nav-btn i{
+display: flex;
+color: var(--dark-color);
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+}
+.continer .navsection .navlogo{
+display: flex;
+gap: 0.5rem;
+text-decoration: none;
+}
+.continer  .navsection .navlogo .logotexet{
+font-size: 1.25rem;
+color: var(--dark-color);
+}
+.continer header .navbar .navcenter {
+display: flex;
+width: 100%;
+justify-content: center;
+}
+.continer header .navbar .navcenter .searchform{
+max-width: 550px;
+flex: 1;
+ height: 40px;
+}
+.continer header .navbar .navcenter .searchform .searchinput{
+height: 100%;
+width: 100%;
+padding: 0 1rem;
+border-radius: 3.1rem 0 0 3.1rem;
+outline: none;
+border: 1px solid var(--scondary-color);
+font-size: 1rem;
+}
+.continer header .navbar .navcenter .searchform .searchbtn{
+width: auto;
+border: 1px solid var(--scondary-color);
+border-radius: 0 3.1rem 3.1rem 0;
+padding: 0 1.25rem;
+border-left: 0;
+}
+.searchbtn i{
+    color: var(--dark-color);
+}
+.navbar .navright .searchbtn{
+    display: none;
+}
+.mainlayout{
+display: flex;
+overflow-y: auto;
+}
+body.mmm .mainlayout .sidebar{
+    padding: 0;
+    width: 0;
+}
+.mainlayout .sidebar .nav-left{
+    display: none;
+    padding: 0.5rem 0.3rem;
+}
+.mainlayout .sidebar{
+max-width: 280px;
+/* display: none; */
+padding: 0  0.7rem 0;
+background-color: var(--white-color);
+}
+.mainlayout .sidebar .linkcontinar{
+overflow-y: auto;
+padding: 1rem 0 2rem;
+scrollbar-width: thin;
+height: calc(100vh - 60px);
+scrollbar-color: transparent transparent;
+  
+}
+.mainlayout .sidebar .linkcontinar:hover{
+scrollbar-color: var(--scondary-color) transparent;
+
+}
+
+.mainlayout .sidebar .linkcontinar .linksection h4{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-right: 0rem;
+}
+
+.mainlayout .sidebar .linkcontinar .linksection{
+display: flex;
+flex-direction: column;
+padding: 10px 0px;
+gap: 10px;
+/* background-color: #e5e5e5; */
+}
+.mainlayout .sidebar .linkcontinar .linksection .linkitem{
+text-decoration: none;
+color: var(--dark-color);
+display: flex;
+gap: 5px;
+/* background-color: #d4d4d4; */
+padding: 10px 10px;
+font-weight: 600;
+font-size: 1rem;
+border-radius: 1rem;
+
+}
+.mainlayout .sidebar .linkcontinar .linksection .linkitem i{
+/* color: #000; */
+font-size: 1.2rem;
+}
+.mainlayout .sidebar .linkcontinar .linksection .linkitem:hover{
+    background-color:var(--light-pink-color);
+
+}
+
+
+.mainlayout .sidebar .linkcontinar .sectionsepretor{
+/* display: none; */
+height: 1px;
+margin: 0.625rem 0;
+background-color:var(--light-pink-color);
+}
+
+.mainlayout .contentwrapper{
+padding: 0 1rem;
+overflow-x: hidden;
+width: 100%;
+}
+.mainlayout .contentwrapper .ctogrylist{
+display: flex;
+gap: 0.75rem;
+overflow-x: auto;
+padding: 0.75rem 0 0.7rem;
+scrollbar-width: none;
+}
+.mainlayout .contentwrapper .ctogrylist .catogrybtn{
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+}
+
+.videoliest{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 1rem;
+    padding: 1.25rem 0 4rem;
+
+}
+.videoliest .videocard{
+text-decoration: none;
+}
+.videoliest .videocard p{
+    font-size: 0.875rem;
+    color: var(--media-grar-color);
+}
+
+.videoliest .videocard .tumanielcontiner{
+position: relative;
+}
+.videoliest .videocard .tumanielcontiner .thumailimg{
+    width: 100%;
+    border-radius: 0.5rem;
+    aspect-ratio: 16/9;
+}
+.videoliest .videocard .tumanielcontiner .duration{
+position: absolute;
+right: 0.65rem;
+bottom: 0.8rem;
+color: var(--white-color);
+background-color: var(--dark-color);
+border-radius: 0.3rem;
+font-size: 0.875rem;
+padding: 0 0.3rem; 
+}
+
+.videoliest .videoinfo{
+display: flex;
+gap: 0.7rem;
+padding: 0.7rem 0.5rem;
+}
+.videoliest .videoinfo .icon{
+width: 36px;
+height: 36px;
+border-radius: 50%;
+}
+.videoliest .videoinfo .vediodeta .tital{
+font-size: 1rem;
+font-weight: 600;
+color: var(--dark-color);
+overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient:vertical ;
+-webkit-line-clamp: 2;
+}
+.videoliest .videoinfo .vediodeta .tital:hover{
+    color: var(--mediam-rary-color);
+}
+
+
+.videoliest .videoinfo .vediodeta .chanalname{
+margin: 0.25rem 0 0.15rem;
+}
+
+header,.ctogrylist{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--white-color);
+}
+.continer{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+.mainlayout .contentwrapper .ctogrylist .catogrybtn:hover{
+    background: var(--light-pink-color);
+}
+.mainlayout .contentwrapper .ctogrylist .catogrybtn.active{
+    color: var(--white-color);
+    background: var(--dark-color);
+    pointer-events: none;
+}
+@media(max-width:768px){
+   .continer header .navbar .navcenter{
+        display: none;
+    }
+    .navbar .navright .searchbtn{
+        display: block;
+    }
+    .mainlayout .screemoverall{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        background:#4040403f ;
+            transition: 0.2s ease;
+    }
+     body.mmm .mainlayout .screemoverall{
+        opacity: 0;
+        pointer-events: none;
+     }
+    .mainlayout .sidebar{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        height: 100vh;
+        transition: 0.2s ease;
+     }
+     body.mmm .mainlayout .sidebar{
+        left: -280px;
+     }
+.mainlayout .sidebar .nav-left{
+display: flex;
+}
+}
